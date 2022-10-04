@@ -1,5 +1,6 @@
 import os
 import json
+import jsonschema
 
 class LoadConfigs:
     def __init__(self, testing=False):
@@ -52,5 +53,33 @@ class LoadJSONFile:
         return(self.JSON_content)
 
 class IdentifyJSONFileType:
-    def __init__(self, file_name, file_content):
-        print("odoo")
+    def __init__(self, file_content):
+        self.file_content = file_content
+        print("checks filetype based on jsonschema")
+
+    # returns: 
+    # type: GSD/OSV/CVE/NVD, 
+    # subtype: REJECT/RESERVED/PUBLIC, OSV/CVE, NVD_FEED/NVD_INDIVIDUAL
+    # namespace: namespace if applicable cve.org/nvd.nist.gov/mozilla.org, etc.
+    # version 4.0/5.0/1.0.0/1.2.0/1.3.0/etc.
+
+    def check_JSON_keys(self):
+    # GSD
+        if "gsd" in self.file_content:
+            print("GSD")
+
+    # OSV
+        if "schema_version" in self.file_content:
+            print("OSV")
+
+    # CVE
+        if "data_type" in self.file_content:
+            if self.file_content["data_type"] == "CVE"
+                print("CVE")
+
+    # NVD
+        print("NVD")
+
+class CheckJSONSchemaType:
+    def __init__(self, file_content):
+        print("checks filetype based on jsonschema")
