@@ -79,6 +79,9 @@ class IdentifyJSONDataType:
 
     # NVD
         print("NVD")
+        
+    def check_JSON_schema(self):
+        print("Checks against JSON schemas to find most likely fit")
 
 
 class CheckJSONSchemaType:
