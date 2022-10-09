@@ -52,13 +52,13 @@ class LoadJSONFile:
                 quit()
         return(self.JSON_content)
 
-class IdentifyJSONFileType:
+class IdentifyJSONDataType:
     def __init__(self, file_content):
         self.file_content = file_content
         print("checks filetype based on jsonschema")
 
     # returns: 
-    # type: GSD/OSV/CVE/NVD, 
+    # type: GSD/OSV/CVE/NVD, etc
     # subtype: REJECT/RESERVED/PUBLIC, OSV/CVE, NVD_FEED/NVD_INDIVIDUAL
     # namespace: namespace if applicable cve.org/nvd.nist.gov/mozilla.org, etc.
     # version 4.0/5.0/1.0.0/1.2.0/1.3.0/etc.
@@ -79,6 +79,7 @@ class IdentifyJSONFileType:
 
     # NVD
         print("NVD")
+
 
 class CheckJSONSchemaType:
     def __init__(self, file_content):
