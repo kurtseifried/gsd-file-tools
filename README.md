@@ -22,7 +22,7 @@ GSD in CVE format (lossy)
 * Add files into appropriate GSD namespaces (e.g. mozilla.org, GHSA) - addDataToFile.py
 * Extract data from namespaces (e.g. mozilla.org) data and add to GSD area (used in convertFile.py)
 * Generate GSD files (GSD, OSV and CVE formats) based on GSD files and older GSD files, OSV, CVE - convertFile.py
-* Intelligently deal wth some of the boviously broken data like "** RESERVED **" and "n/a"
+* Intelligently deal wth some of the obviously broken data like "** RESERVED **" and "n/a"
 
 # Extended capabilities:
 
