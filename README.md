@@ -17,11 +17,12 @@ GSD in CVE format (lossy)
 # Basic capabilities:
 
 * Set configuration (dirs, files, etc.)
-* Load files into memory and identify them (GSD, OSV, GHSA, etc.)
+* Load files into memory and identify them (multiple: GSD and singular: OSV, CVE, GHSA, etc.)
 * Schema validation of files including "deep" validations (e.g. GSD, NVD) - validateFileSchema.py
-* Add files into appropriate GSD namespaces (e.g. mozilla.org, GHSA) - addDataToFile.py
+* Add files into appropriate GSD namespaces (e.g. mozilla.org, GHSA) - addFileToFile.py
+* Add reference links and other data into appropriate GSD references - addDataToFile.py
 * Extract data from namespaces (e.g. mozilla.org) data and add to GSD area (used in convertFile.py)
-* Generate GSD files (GSD, OSV and CVE formats) based on GSD files and older GSD files, OSV, CVE - convertFile.py
+* Generate GSD files (GSD, OSV and CVE formats) based on GSD files and older GSD files, OSV, CVE - convertFile.py?
 * Intelligently deal wth some of the obviously broken data like "** RESERVED **" and "n/a"
 
 # Extended capabilities:
