@@ -60,9 +60,46 @@ GHSA-stuff.json (GHSA)
     "format": "OSV"
 }
 
-### CVE 4.0 PUBLIC/REJECT/RESERVED
+### CVE 4.0
+
+CVE 4.0 uses three main JSON schemas for PUBLIC, REJECT and RESERVED
+
+#### CVE 4.0 PUBLIC
+
+```
+  "data_format": "MITRE",
+  "data_type": "CVE",
+  "data_version": "4.0",
+  "CVE_data_meta": {
+    "STATE": "PUBLIC"
+  },
+```
+
+#### CVE 4.0 REJECT
+
+```
+  "data_format": "MITRE",
+  "data_type": "CVE",
+  "data_version": "4.0",
+  "CVE_data_meta": {
+    "STATE": "REJECT"   
+  }
+```
+
+#### CVE 4.0 RESERVED
+
+```
+  "data_type": "CVE",
+  "data_format": "MITRE",
+  "data_version": "4.0",
+  "CVE_data_meta": {
+    "STATE": "RESERVED"
+  }
+```
 
 ### CVE 5.0
+
+A single unified schema https://github.com/CVEProject/cve-schema/blob/master/schema/v5.0/CVE_JSON_5.0_schema.json
 
 ### NVD
 
@@ -81,8 +118,3 @@ TODO: check database_specific for other interesting data
         "severity": "MODERATE"
     }
 }
-
-
-
-
-
